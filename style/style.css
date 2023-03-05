@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow: hidden;
+    background-color: #dab895;
+    background-image: url("../img/1d26c5b022c071fb8f1e3ae2f0f65ba9.gif");
+}
+
+.XO-game{
+    width: 100%;
+    height: 100vh;
+}
+.main-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 10px solid white;
+    outline: 2px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 20px #000;
+}
+.grid-game{
+    display: grid;
+    grid-template-columns: repeat(3,120px);
+    grid-template-rows: repeat(3,150px);
+    grid-gap: 10px;
+    border: 30px solid orangered;
+    border-radius: 5px;
+    padding: 10px;
+}
+.sq{
+    background-color: #e5e3e3;
+    transition: .3s;
+}
+.sq:hover{
+    background-color: rgb(180, 179, 179);
+}
+.sq-x{
+    background-color: #ff8000;
+    color: #fff;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+}
+.sq-o{
+    background-color: #00ff22;
+    color: #fff;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+}
+.game-info{
+    background-color: #00ff22;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 2em;
+    width: 100%;
+    transition: all .2s;
+    outline: 1px solid #fff;
+
+}
+.winner{
+    background-color: dimgrey;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.end-game{
+    position: absolute;
+    display: none;
+}
+.winMsg{
+    background-color: #e5e3e3;
+    width: 250px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 5px solid orange;
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center;
+}
+.banar{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+.winMsg span{
+    display: inline-block;
+    padding: 20px;
+    color: orangered;
+}
+.copyRight{
+    padding: 20px;
+    font-weight: 600;
+
+}
+@media (max-width: 600px) {
+    .grid-game{
+        grid-template-columns: repeat(3,100px);
+    }
+}
