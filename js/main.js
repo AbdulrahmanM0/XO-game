@@ -38,13 +38,17 @@ function noWinner(){
     document.getElementById("end-game").style.cssText = "display: block";
     document.getElementById("block").style.cssText = "display: block";
     setTimeout(()=>{location.reload()},3000);
+    function finWins(){
+    let winImg = document.getElementById("winImg");
+      winImg.style.display = "inline-block";
+    }
+    finWins();
 }
 function end(){
     for(let i = 1;i <= game.childElementCount;i++){
         arr[i] = document.getElementById(`sq${i}`).innerHTML;
         
     }
-    
     if(arr[1] === arr[2] && arr[2] === arr[3] && arr[1] != ""){
         document.getElementById("winner-Name").innerHTML = arr[2];
         winner(1,2,3);
