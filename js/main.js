@@ -33,16 +33,16 @@ function winner(a,b,c){
     document.getElementById("end-game").style.cssText = "display: block";
     document.getElementById("block").style.cssText = "display: block";
     setTimeout(()=>{location.reload()},3000);
-}
-function noWinner(){
-    document.getElementById("end-game").style.cssText = "display: block";
-    document.getElementById("block").style.cssText = "display: block";
-    setTimeout(()=>{location.reload()},3000);
     function finWins(){
     let winImg = document.getElementById("winImg");
       winImg.style.display = "inline-block";
     }
     finWins();
+}
+function noWinner(){
+    document.getElementById("end-game").style.cssText = "display: block";
+    document.getElementById("block").style.cssText = "display: block";
+    setTimeout(()=>{location.reload()},3000);
 }
 function end(){
     for(let i = 1;i <= game.childElementCount;i++){
